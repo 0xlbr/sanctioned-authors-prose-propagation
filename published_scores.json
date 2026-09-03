@@ -1,0 +1,33 @@
+{
+  "instrument": "sanctioned-prose-v2-eb",
+  "scored": "2026-08-26",
+  "scoring": "strict tok(), >=8 consecutive identical words",
+  "n_articles": 193,
+  "n_questions": 200,
+  "questions_blocked_author": 87,
+  "questions_other": 113,
+  "min_verbatim_span_words": 8,
+  "statistic": "paste rate by question arm and paste-rate ratio (blocked-author paste rate ÷ never-blocked paste rate)",
+  "models": [
+    {"id": "claude-sonnet-4-6", "n": 200, "with_copy": 85, "paste_pct": 42.5,
+     "blocked_author": {"paste": 47, "n": 87, "pct": 54.0},
+     "other": {"paste": 38, "n": 113, "pct": 33.6},
+     "paste_rate_ratio": 1.61},
+    {"id": "grok-4.3", "n": 200, "with_copy": 53, "paste_pct": 26.5,
+     "blocked_author": {"paste": 26, "n": 87, "pct": 29.9},
+     "other": {"paste": 27, "n": 113, "pct": 23.9},
+     "paste_rate_ratio": 1.25},
+    {"id": "gpt-5.6-terra", "n": 200, "with_copy": 20, "paste_pct": 10.0,
+     "blocked_author": {"paste": 10, "n": 87, "pct": 11.5},
+     "other": {"paste": 10, "n": 113, "pct": 8.8},
+     "paste_rate_ratio": 1.3}
+  ],
+  "pooled": {
+    "n": 600, "with_copy": 158, "paste_pct": 26.3,
+    "blocked_author": {"paste": 83, "n": 261, "pct": 31.8},
+    "other": {"paste": 75, "n": 339, "pct": 22.1},
+    "paste_rate_ratio": 1.44,
+    "paste_rate_ratio_ci_95": [1.07, 1.94],
+    "ci_method": "clustered bootstrap over questions, 10k resamples, seed 42"
+  }
+}
